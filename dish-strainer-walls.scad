@@ -3,11 +3,12 @@ use <MCAD/array/rectangular.scad>
 use <MCAD/array/mirror.scad>
 use <MCAD/fillets/primitives.scad>
 
+clearance = 0.5;
 corner_r = 35;
-corner_width = 72;
-corner_depth = 70;
+corner_width = 72 - clearance;
+corner_depth = 70 - clearance;
 
-centre_width = 51;
+centre_width = 51 - clearance;
 centre_corner_r = 8;
 
 hole_height = 104.65;
