@@ -75,11 +75,15 @@ module corner_strainer_wall()
         }
 
         /* remove back wall */
-        cube([corner_width, 10, hole_height - hole_stub_height]);
+        cube([corner_width, 20, hole_height - hole_stub_height]);
 
         /* remove side wall */
         translate([corner_width - wall_thickness - 29, -1])
         cube([30, corner_depth, hole_height - hole_stub_height]);
+
+        /* remove a bit from the front corner */
+        translate([corner_width - wall_thickness - 20, 1])
+        cube([20, corner_depth, hole_height - hole_stub_height]);
     }
 }
 
@@ -110,7 +114,7 @@ module centre_strainer_wall()
 
         /* remove back wall */
         translate([-epsilon, 0])
-        cube([corner_width, 10, hole_height - hole_stub_height]);
+        cube([corner_width, 20, hole_height - hole_stub_height]);
     }
 }
 
